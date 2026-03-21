@@ -1,0 +1,9 @@
+global:
+  tech-stack:
+    description: Frontend tech stack and no-framework policy
+
+frontend:
+  accessibility:
+    description: WCAG 2.1 AA compliance requirements and testing
+  images:
+    description: Image formats, optimisation, and alt text standards
