@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50" width="30" height="50" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+  <!--
+    SL monogram: elegant, thin intertwined S and L.
+    A single continuous flowing line — the S curves sit on
+    a shared vertical stroke that becomes the L's upright,
+    with the L extending horizontally at the base.
+  -->
+  <path d="
+    M 19 2
+    C 13 2, 9 5.5, 9 9.5
+    C 9 14, 16 15.5, 16 20
+    C 16 24.5, 9 26, 9 30.5
+    C 9 35, 13 38, 16 38
+    L 16 38
+    L 16 6
+  " />
+  <path d="
+    M 16 38
+    L 25 38
+  " />
+</svg>

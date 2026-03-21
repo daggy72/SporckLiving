@@ -1,12 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SporckLiving</title>
+
+  <!-- Google Fonts: Josefin Sans (Light 300, Regular 400) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- TailwindCSS 4.0 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss = { config: { theme: { extend: {
+      colors: {
+        'warm': '#E8E7E6',
+        'heading': '#6E6E6E',
+        'nav': '#9B9B9B',
+        'body-text': '#878787',
+        'subtitle': '#B9B9B9',
+        'light': '#AFAFAF',
+        'separator': '#D7D7D7',
+        'accent-blue': '#CDD7DC',
+        'accent-pink': '#EBC8C3',
+      },
+      fontFamily: {
+        'sans': ['"Josefin Sans"', 'sans-serif'],
+      },
+    }}}}
+  </script>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/custom.css">
 </head>
-<body>
-  <h1>SporckLiving</h1>
+<body class="font-sans text-body-text antialiased">
+
+  <!-- ============================================
+       DESIGN SYSTEM TEST PAGE (temporary)
+       Will be replaced with HOME page in Task 4
+       ============================================ -->
+
+  <div class="max-w-4xl mx-auto px-8 py-16">
+
+    <!-- Title -->
+    <header class="mb-16 text-center">
+      <img src="/assets/images/logo-sl.svg" alt="SL monogram" class="mx-auto mb-8 h-12 text-heading">
+      <h1 class="text-heading font-light tracking-heading uppercase text-2xl">
+        SPORCK LIVING
+      </h1>
+      <p class="text-subtitle tracking-wider uppercase text-sm mt-2">
+        Interior Design Portfolio
+      </p>
+    </header>
+
+    <!-- Colour Palette -->
+    <section class="mb-16">
+      <h2 class="text-heading font-light tracking-heading uppercase text-lg mb-8">Colour Palette</h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+
+        <div class="text-center">
+          <div class="w-full aspect-square rounded bg-warm border border-separator"></div>
+          <p class="text-xs mt-2 text-heading font-light">Warm</p>
+          <p class="text-xs text-subtitle">#E8E7E6</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-full aspect-square rounded bg-white border border-separator"></div>
+          <p class="text-xs mt-2 text-heading font-light">White</p>
+          <p class="text-xs text-subtitle">#FFFFFF</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-full aspect-square rounded" style="background-color: #6E6E6E;"></div>
+          <p class="text-xs mt-2 text-heading font-light">Heading</p>
+          <p class="text-xs text-subtitle">#6E6E6E</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-full aspect-square rounded" style="background-color: #9B9B9B;"></div>
+          <p class="text-xs mt-2 text-heading font-light">Nav</p>
+          <p class="text-xs text-subtitle">#9B9B9B</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-full aspect-square rounded" style="background-color: #878787;"></div>
+          <p class="text-xs mt-2 text-heading font-light">Body Text</p>
+          <p class="text-xs text-subtitle">#878787</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-full aspect-square rounded" style="background-color: #B9B9B9;"></div>
+          <p class="text-xs mt-2 text-heading font-light">Subtitle</p>
+          <p class="text-xs text-subtitle">#B9B9B9</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-full aspect-square rounded" style="background-color: #AFAFAF;"></div>
+          <p class="text-xs mt-2 text-heading font-light">Light</p>
+          <p class="text-xs text-subtitle">#AFAFAF</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-full aspect-square rounded bg-separator"></div>
+          <p class="text-xs mt-2 text-heading font-light">Separator</p>
+          <p class="text-xs text-subtitle">#D7D7D7</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-full aspect-square rounded bg-accent-blue"></div>
+          <p class="text-xs mt-2 text-heading font-light">Accent Blue</p>
+          <p class="text-xs text-subtitle">#CDD7DC</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-full aspect-square rounded bg-accent-pink"></div>
+          <p class="text-xs mt-2 text-heading font-light">Accent Pink</p>
+          <p class="text-xs text-subtitle">#EBC8C3</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Typography Samples -->
+    <section class="mb-16">
+      <h2 class="text-heading font-light tracking-heading uppercase text-lg mb-8">Typography</h2>
+
+      <div class="space-y-8">
+
+        <!-- Heading style -->
+        <div class="border-b border-separator pb-6">
+          <p class="text-xs text-subtitle uppercase tracking-wider mb-2">Heading (font-light, tracking-heading, uppercase)</p>
+          <h3 class="text-heading font-light tracking-heading uppercase text-2xl">
+            Interior Design
+          </h3>
+        </div>
+
+        <!-- Subtitle style -->
+        <div class="border-b border-separator pb-6">
+          <p class="text-xs text-subtitle uppercase tracking-wider mb-2">Subtitle (tracking-wider, uppercase)</p>
+          <p class="text-subtitle tracking-wider uppercase text-sm">
+            Creating Beautiful Spaces
+          </p>
+        </div>
+
+        <!-- Body text style -->
+        <div class="border-b border-separator pb-6">
+          <p class="text-xs text-subtitle uppercase tracking-wider mb-2">Body Text (regular weight, normal tracking)</p>
+          <p class="text-body-text text-base leading-relaxed">
+            Every space tells a story. Through thoughtful design, carefully chosen materials,
+            and an eye for detail, we create interiors that are both beautiful and liveable.
+            Our approach blends timeless elegance with modern functionality.
+          </p>
+        </div>
+
+        <!-- Nav text style -->
+        <div class="border-b border-separator pb-6">
+          <p class="text-xs text-subtitle uppercase tracking-wider mb-2">Navigation (nav colour, uppercase, wide tracking)</p>
+          <p class="text-nav tracking-wide-extra uppercase text-sm">
+            Home &nbsp;&middot;&nbsp; About &nbsp;&middot;&nbsp; Projects &nbsp;&middot;&nbsp; Contact
+          </p>
+        </div>
+
+        <!-- SPORCK LIVING title -->
+        <div>
+          <p class="text-xs text-subtitle uppercase tracking-wider mb-2">"SPORCK LIVING" title treatment</p>
+          <h3 class="text-heading font-light tracking-heading uppercase text-3xl">
+            SPORCK LIVING
+          </h3>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Separator Example -->
+    <section>
+      <h2 class="text-heading font-light tracking-heading uppercase text-lg mb-8">Separator</h2>
+      <hr class="border-separator">
+      <p class="text-xs text-subtitle mt-4">1px border using separator colour (#D7D7D7)</p>
+    </section>
+
+  </div>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>

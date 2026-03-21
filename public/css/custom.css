@@ -1,3 +1,5 @@
+/* SporckLiving — Design System Custom Properties & Utilities */
+
 :root {
   --color-bg-warm: #E8E7E6;
   --color-bg-white: #FFFFFF;
@@ -9,4 +11,30 @@
   --color-separator: #D7D7D7;
   --color-accent-blue: #CDD7DC;
   --color-accent-pink: #EBC8C3;
+}
+
+/* Base body styles */
+body {
+  background-color: var(--color-bg-white);
+  color: var(--color-text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Letter-spacing utilities (beyond Tailwind defaults) */
+.tracking-heading {
+  letter-spacing: 0.3em;
+}
+
+.tracking-wide-extra {
+  letter-spacing: 0.15em;
+}
+
+/* Font-weight utilities matching Josefin Sans loaded weights */
+.font-josefin-light {
+  font-weight: 300;
+}
+
+.font-josefin-regular {
+  font-weight: 400;
 }
