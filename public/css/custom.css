@@ -40,6 +40,29 @@ body {
   font-weight: 400;
 }
 
+/* Accessibility: focus indicators
+   Enhanced focus styles for interactive elements against warm grey backgrounds.
+   The default Tailwind ring can be too subtle, so we add a visible outline. */
+a:focus-visible,
+button:focus-visible,
+[role="tab"]:focus-visible {
+  outline: 2px solid #6E6E6E;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Accessibility: colour contrast notes
+   Body text #878787 on white #FFFFFF = ~3.5:1 (FAILS AA 4.5:1)
+   Suggested: #696969 (4.7:1)
+   Nav text #9B9B9B on warm grey #E8E7E6 = ~2.1:1 (FAILS AA 4.5:1)
+   Suggested: #767676 (4.5:1)
+   Subtitle text #B9B9B9 on white #FFFFFF = ~1.9:1 (FAILS AA 4.5:1)
+   Suggested: #767676 (4.5:1)
+   Heading text #6E6E6E on white #FFFFFF = ~4.7:1 (PASSES AA 4.5:1)
+   Heading text #6E6E6E on warm grey #E8E7E6 = ~3.0:1 (FAILS AA 4.5:1 for body text, PASSES 3:1 for large text)
+   These adjustments are pending client approval.
+*/
+
 /* Fade-in animation */
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(10px); }

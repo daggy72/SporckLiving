@@ -74,28 +74,71 @@
 
   if (!tabs.length) return;
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const filter = tab.dataset.filter;
+  function activateTab(tab) {
+    const filter = tab.dataset.filter;
 
-      // Update tab states
-      tabs.forEach(t => {
-        t.setAttribute('aria-selected', 'false');
-        t.classList.remove('text-heading');
-        t.classList.add('text-subtitle');
-      });
-      tab.setAttribute('aria-selected', 'true');
-      tab.classList.remove('text-subtitle');
-      tab.classList.add('text-heading');
-
-      // Filter cards
-      cards.forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+    // Update tab states
+    tabs.forEach(t => {
+      t.setAttribute('aria-selected', 'false');
+      t.setAttribute('tabindex', '-1');
+      t.classList.remove('text-heading');
+      t.classList.add('text-subtitle');
     });
+    tab.setAttribute('aria-selected', 'true');
+    tab.setAttribute('tabindex', '0');
+    tab.classList.remove('text-subtitle');
+    tab.classList.add('text-heading');
+    tab.focus();
+
+    // Filter cards
+    cards.forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => activateTab(tab));
   });
+
+  // Keyboard navigation: arrow keys move between tabs (WAI-ARIA tab pattern)
+  const tablist = document.querySelector('[role="tablist"]');
+  if (tablist) {
+    // Set initial tabindex: only selected tab is in tab order
+    tabs.forEach(tab => {
+      if (tab.getAttribute('aria-selected') === 'true') {
+        tab.setAttribute('tabindex', '0');
+      } else {
+        tab.setAttribute('tabindex', '-1');
+      }
+    });
+
+    tablist.addEventListener('keydown', (e) => {
+      const tabArray = Array.from(tabs);
+      const current = tabArray.indexOf(document.activeElement);
+      if (current === -1) return;
+
+      let next;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        next = (current + 1) % tabArray.length;
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        next = (current - 1 + tabArray.length) % tabArray.length;
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        next = 0;
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        next = tabArray.length - 1;
+      }
+
+      if (next !== undefined) {
+        activateTab(tabArray[next]);
+      }
+    });
+  }
 })();
