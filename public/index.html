@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SporckLiving</title>
+  <title>Sporck Living | Interior Design by Giorgia Sporck</title>
+  <meta name="description" content="Portfolio of Giorgia Sporck — interior design projects blending timeless elegance with modern functionality.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sporck Living | Interior Design by Giorgia Sporck">
+  <meta property="og:description" content="Portfolio of Giorgia Sporck — interior design projects blending timeless elegance with modern functionality.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="/assets/images/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Google Fonts: Josefin Sans (Light 300, Regular 400) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,152 +49,54 @@
 </head>
 <body class="font-sans text-body-text antialiased">
 
-  <!-- ============================================
-       DESIGN SYSTEM TEST PAGE (temporary)
-       Will be replaced with HOME page in Task 4
-       ============================================ -->
+  <!-- Skip to content -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:px-4 focus:py-2 focus:z-50 focus:text-heading">
+    Skip to main content
+  </a>
 
-  <div class="max-w-4xl mx-auto px-8 py-16">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-warm/80 backdrop-blur-sm">
+    <div class="max-w-[1100px] mx-auto px-8 py-6 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" aria-label="Sporck Living — Home">
+        <img src="/assets/images/logo-sl.svg" alt="" class="h-10 text-heading" aria-hidden="true">
+      </a>
 
-    <!-- Title -->
-    <header class="mb-16 text-center">
-      <img src="/assets/images/logo-sl.svg" alt="SL monogram" class="mx-auto mb-8 h-12 text-heading">
-      <h1 class="text-heading font-light tracking-heading uppercase text-2xl">
-        SPORCK LIVING
-      </h1>
-      <p class="text-subtitle tracking-wider uppercase text-sm mt-2">
-        Interior Design Portfolio
-      </p>
-    </header>
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-12" aria-label="Main navigation">
+        <a href="/about.html" class="text-nav text-xs tracking-[0.15em] uppercase font-light hover:text-heading transition-colors duration-150">About Me</a>
+        <a href="/projects.html" class="text-nav text-xs tracking-[0.15em] uppercase font-light hover:text-heading transition-colors duration-150">Projects</a>
+        <a href="/contacts.html" class="text-nav text-xs tracking-[0.15em] uppercase font-light hover:text-heading transition-colors duration-150">Contacts</a>
+      </nav>
 
-    <!-- Colour Palette -->
-    <section class="mb-16">
-      <h2 class="text-heading font-light tracking-heading uppercase text-lg mb-8">Colour Palette</h2>
+      <!-- Mobile hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden text-heading p-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+        </svg>
+      </button>
+    </div>
+  </header>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-
-        <div class="text-center">
-          <div class="w-full aspect-square rounded bg-warm border border-separator"></div>
-          <p class="text-xs mt-2 text-heading font-light">Warm</p>
-          <p class="text-xs text-subtitle">#E8E7E6</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-full aspect-square rounded bg-white border border-separator"></div>
-          <p class="text-xs mt-2 text-heading font-light">White</p>
-          <p class="text-xs text-subtitle">#FFFFFF</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-full aspect-square rounded" style="background-color: #6E6E6E;"></div>
-          <p class="text-xs mt-2 text-heading font-light">Heading</p>
-          <p class="text-xs text-subtitle">#6E6E6E</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-full aspect-square rounded" style="background-color: #9B9B9B;"></div>
-          <p class="text-xs mt-2 text-heading font-light">Nav</p>
-          <p class="text-xs text-subtitle">#9B9B9B</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-full aspect-square rounded" style="background-color: #878787;"></div>
-          <p class="text-xs mt-2 text-heading font-light">Body Text</p>
-          <p class="text-xs text-subtitle">#878787</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-full aspect-square rounded" style="background-color: #B9B9B9;"></div>
-          <p class="text-xs mt-2 text-heading font-light">Subtitle</p>
-          <p class="text-xs text-subtitle">#B9B9B9</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-full aspect-square rounded" style="background-color: #AFAFAF;"></div>
-          <p class="text-xs mt-2 text-heading font-light">Light</p>
-          <p class="text-xs text-subtitle">#AFAFAF</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-full aspect-square rounded bg-separator"></div>
-          <p class="text-xs mt-2 text-heading font-light">Separator</p>
-          <p class="text-xs text-subtitle">#D7D7D7</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-full aspect-square rounded bg-accent-blue"></div>
-          <p class="text-xs mt-2 text-heading font-light">Accent Blue</p>
-          <p class="text-xs text-subtitle">#CDD7DC</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-full aspect-square rounded bg-accent-pink"></div>
-          <p class="text-xs mt-2 text-heading font-light">Accent Pink</p>
-          <p class="text-xs text-subtitle">#EBC8C3</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Typography Samples -->
-    <section class="mb-16">
-      <h2 class="text-heading font-light tracking-heading uppercase text-lg mb-8">Typography</h2>
-
-      <div class="space-y-8">
-
-        <!-- Heading style -->
-        <div class="border-b border-separator pb-6">
-          <p class="text-xs text-subtitle uppercase tracking-wider mb-2">Heading (font-light, tracking-heading, uppercase)</p>
-          <h3 class="text-heading font-light tracking-heading uppercase text-2xl">
-            Interior Design
-          </h3>
-        </div>
-
-        <!-- Subtitle style -->
-        <div class="border-b border-separator pb-6">
-          <p class="text-xs text-subtitle uppercase tracking-wider mb-2">Subtitle (tracking-wider, uppercase)</p>
-          <p class="text-subtitle tracking-wider uppercase text-sm">
-            Creating Beautiful Spaces
-          </p>
-        </div>
-
-        <!-- Body text style -->
-        <div class="border-b border-separator pb-6">
-          <p class="text-xs text-subtitle uppercase tracking-wider mb-2">Body Text (regular weight, normal tracking)</p>
-          <p class="text-body-text text-base leading-relaxed">
-            Every space tells a story. Through thoughtful design, carefully chosen materials,
-            and an eye for detail, we create interiors that are both beautiful and liveable.
-            Our approach blends timeless elegance with modern functionality.
-          </p>
-        </div>
-
-        <!-- Nav text style -->
-        <div class="border-b border-separator pb-6">
-          <p class="text-xs text-subtitle uppercase tracking-wider mb-2">Navigation (nav colour, uppercase, wide tracking)</p>
-          <p class="text-nav tracking-wide-extra uppercase text-sm">
-            Home &nbsp;&middot;&nbsp; About &nbsp;&middot;&nbsp; Projects &nbsp;&middot;&nbsp; Contact
-          </p>
-        </div>
-
-        <!-- SPORCK LIVING title -->
-        <div>
-          <p class="text-xs text-subtitle uppercase tracking-wider mb-2">"SPORCK LIVING" title treatment</p>
-          <h3 class="text-heading font-light tracking-heading uppercase text-3xl">
-            SPORCK LIVING
-          </h3>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Separator Example -->
-    <section>
-      <h2 class="text-heading font-light tracking-heading uppercase text-lg mb-8">Separator</h2>
-      <hr class="border-separator">
-      <p class="text-xs text-subtitle mt-4">1px border using separator colour (#D7D7D7)</p>
-    </section>
-
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-warm hidden flex-col items-center justify-center" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button id="mobile-menu-close" class="absolute top-6 right-8 text-heading p-2" aria-label="Close menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <nav class="flex flex-col items-center gap-8" aria-label="Main navigation">
+      <a href="/" class="text-heading text-sm tracking-[0.15em] uppercase font-light">Home</a>
+      <a href="/about.html" class="text-heading text-sm tracking-[0.15em] uppercase font-light">About Me</a>
+      <a href="/projects.html" class="text-heading text-sm tracking-[0.15em] uppercase font-light">Projects</a>
+      <a href="/contacts.html" class="text-heading text-sm tracking-[0.15em] uppercase font-light">Contacts</a>
+    </nav>
   </div>
+
+  <!-- Main content -->
+  <main id="main-content">
+    <!-- Page content goes here -->
+  </main>
 
   <script src="/js/main.js"></script>
 </body>
