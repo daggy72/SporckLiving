@@ -1,0 +1,9 @@
+node_modules/
+design-extraction/
+.git/
+.claude/
+agent-os/
+*.md
+.env*
+docker-compose*.yml
+Dockerfile
