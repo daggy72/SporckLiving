@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Sporck Living</title>
+  <meta name="description" content="The page you are looking for could not be found.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Google Fonts: Josefin Sans (Light 300, Regular 400) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- TailwindCSS 4.0 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss = { config: { theme: { extend: {
+      colors: {
+        'warm': '#E8E7E6',
+        'heading': '#6E6E6E',
+        'nav': '#9B9B9B',
+        'body-text': '#878787',
+        'subtitle': '#B9B9B9',
+        'light': '#AFAFAF',
+        'separator': '#D7D7D7',
+        'accent-blue': '#CDD7DC',
+        'accent-pink': '#EBC8C3',
+      },
+      fontFamily: {
+        'sans': ['"Josefin Sans"', 'sans-serif'],
+      },
+    }}}}
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body class="font-sans text-body-text antialiased">
+
+  <!-- Main content -->
+  <main class="bg-warm min-h-screen flex items-center justify-center">
+    <div class="text-center px-4">
+      <h1 class="text-heading font-light text-3xl md:text-4xl lg:text-5xl tracking-[0.15em] md:tracking-[0.3em] uppercase mb-4">
+        Page Not Found
+      </h1>
+      <p class="text-subtitle text-sm tracking-[0.1em] mb-10">
+        The page you are looking for does not exist or has been moved.
+      </p>
+      <a href="/" class="text-heading text-xs tracking-[0.15em] uppercase font-light inline-flex items-center gap-2 hover:text-nav transition-colors duration-150">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/>
+        </svg>
+        Back to Home
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>
