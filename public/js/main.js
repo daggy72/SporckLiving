@@ -66,3 +66,36 @@
     }
   });
 })();
+
+// Project tab filtering
+(function() {
+  const tabs = document.querySelectorAll('[role="tab"]');
+  const cards = document.querySelectorAll('[data-category]');
+
+  if (!tabs.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const filter = tab.dataset.filter;
+
+      // Update tab states
+      tabs.forEach(t => {
+        t.setAttribute('aria-selected', 'false');
+        t.classList.remove('text-heading');
+        t.classList.add('text-subtitle');
+      });
+      tab.setAttribute('aria-selected', 'true');
+      tab.classList.remove('text-subtitle');
+      tab.classList.add('text-heading');
+
+      // Filter cards
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
