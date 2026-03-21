@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Sporck Living</title>
+  <meta name="description" content="Get in touch with Giorgia Sporck — interior design enquiries and collaborations.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | Sporck Living">
+  <meta property="og:description" content="Get in touch with Giorgia Sporck — interior design enquiries and collaborations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="/assets/images/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Google Fonts: Josefin Sans (Light 300, Regular 400) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- TailwindCSS 4.0 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss = { config: { theme: { extend: {
+      colors: {
+        'warm': '#E8E7E6',
+        'heading': '#6E6E6E',
+        'nav': '#9B9B9B',
+        'body-text': '#878787',
+        'subtitle': '#B9B9B9',
+        'light': '#AFAFAF',
+        'separator': '#D7D7D7',
+        'accent-blue': '#CDD7DC',
+        'accent-pink': '#EBC8C3',
+      },
+      fontFamily: {
+        'sans': ['"Josefin Sans"', 'sans-serif'],
+      },
+    }}}}
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body class="font-sans text-body-text antialiased">
+
+  <!-- Skip to content -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:px-4 focus:py-2 focus:z-50 focus:text-heading">
+    Skip to main content
+  </a>
+
+  <!-- Header — text logo variant for Contacts page -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-warm/80 backdrop-blur-sm">
+    <div class="max-w-[1100px] mx-auto px-8 py-6 flex items-center justify-between">
+      <!-- Text logo instead of SL monogram -->
+      <a href="/" class="text-heading text-xs tracking-[0.15em] uppercase font-light" aria-label="Sporck Living — Home">
+        Sporck Living
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-12" aria-label="Main navigation">
+        <a href="/about.html" class="text-nav text-xs tracking-[0.15em] uppercase font-light hover:text-heading transition-colors duration-150">About Me</a>
+        <a href="/projects.html" class="text-nav text-xs tracking-[0.15em] uppercase font-light hover:text-heading transition-colors duration-150">Projects</a>
+        <a href="/contacts.html" class="text-nav text-xs tracking-[0.15em] uppercase font-light hover:text-heading transition-colors duration-150">Contacts</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden text-heading p-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-warm hidden flex-col items-center justify-center" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button id="mobile-menu-close" class="absolute top-6 right-8 text-heading p-2" aria-label="Close menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <nav class="flex flex-col items-center gap-8" aria-label="Main navigation">
+      <a href="/" class="text-heading text-sm tracking-[0.15em] uppercase font-light">Home</a>
+      <a href="/about.html" class="text-heading text-sm tracking-[0.15em] uppercase font-light">About Me</a>
+      <a href="/projects.html" class="text-heading text-sm tracking-[0.15em] uppercase font-light">Projects</a>
+      <a href="/contacts.html" class="text-heading text-sm tracking-[0.15em] uppercase font-light">Contacts</a>
+    </nav>
+  </div>
+
+  <!-- Main content -->
+  <main id="main-content" class="bg-warm min-h-screen pt-28">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <!-- Large spacer to push content down -->
+      <div class="h-[30vh]"></div>
+
+      <!-- Contacts heading with separator -->
+      <div class="flex items-center gap-6 mb-10">
+        <h1 class="text-heading font-light text-lg tracking-[0.3em] uppercase whitespace-nowrap">Contacts</h1>
+        <hr class="flex-1 border-separator">
+      </div>
+
+      <!-- Contact details -->
+      <dl class="space-y-4">
+        <div class="flex items-baseline gap-8">
+          <dt class="text-heading text-xs tracking-[0.1em] uppercase w-24 shrink-0">Phone</dt>
+          <dd><a href="tel:+393338781458" class="text-body-text text-sm hover:text-heading transition-colors">+39 3338781458</a></dd>
+        </div>
+        <div class="flex items-baseline gap-8">
+          <dt class="text-heading text-xs tracking-[0.1em] uppercase w-24 shrink-0">E-mail</dt>
+          <dd><a href="mailto:Giorgia@sporck.it" class="text-body-text text-sm hover:text-heading transition-colors">Giorgia@sporck.it</a></dd>
+        </div>
+        <div class="flex items-baseline gap-8">
+          <dt class="text-heading text-xs tracking-[0.1em] uppercase w-24 shrink-0">LinkedIn</dt>
+          <dd><a href="https://www.linkedin.com/in/giorgiasporck" target="_blank" rel="noopener" class="text-body-text text-sm hover:text-heading transition-colors">Giorgiasporck</a></dd>
+        </div>
+        <div class="flex items-baseline gap-8">
+          <dt class="text-heading text-xs tracking-[0.1em] uppercase w-24 shrink-0">Behance</dt>
+          <dd><a href="https://www.behance.net/giorgiasporck" target="_blank" rel="noopener" class="text-body-text text-sm hover:text-heading transition-colors">Giorgiasporck</a></dd>
+        </div>
+        <div class="flex items-baseline gap-8">
+          <dt class="text-heading text-xs tracking-[0.1em] uppercase w-24 shrink-0">Instagram</dt>
+          <dd><a href="https://www.instagram.com/sporckliving" target="_blank" rel="noopener" class="text-body-text text-sm hover:text-heading transition-colors">Sporckliving</a></dd>
+        </div>
+      </dl>
+    </div>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
