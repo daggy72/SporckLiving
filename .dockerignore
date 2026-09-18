@@ -2,7 +2,7 @@ node_modules/
 design-extraction/
 .git/
 .claude/
-agent-os/
+docs/
 *.md
 .env*
 docker-compose*.yml

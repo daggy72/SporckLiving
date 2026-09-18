@@ -16,11 +16,12 @@ This project lives on the **MacBook Pro** (iCloud DevProjects). Claude Code comm
 **Purpose**: Personal/professional portfolio website built from an Adobe XD design
 **Stack**: Static site (HTML + TailwindCSS + Vanilla JS) deployed on Nodion
 
-## Key Documentation (in agent-os/product/)
+## Key Documentation (in docs/product/)
 
-- Mission: `agent-os/product/mission.md`
-- Tech Stack: `agent-os/product/tech-stack.md`
-- Roadmap: `agent-os/product/roadmap.md`
+- Mission: `docs/product/mission.md`
+- Tech Stack: `docs/product/tech-stack.md`
+- Roadmap: `docs/product/roadmap.md`
+- AgentOS (`agent-os/`) was removed 2026-09-17; find it in git history with `git log --all -- agent-os`.
 
 ## Tech Stack
 
@@ -65,10 +66,3 @@ npm run build      # Build for production (if using build step)
 - Optimise images for web (compress, modern formats)
 - Proper meta tags, Open Graph tags, and favicon
 
-## AgentOS 3.0
-
-This project uses AgentOS 3.0 commands:
-- `/plan-product` - Product planning
-- `/shape-spec` - Spec creation with standards
-- `/discover-standards` - Extract patterns from codebase
-- `/inject-standards` - Auto-inject relevant standards

@@ -14,9 +14,9 @@ I'm working on SporckLiving - a portfolio website built from an Adobe XD design,
 **GitHub**: [to be created]
 
 ### Key Documentation (read these first)
-- Product Mission: `agent-os/product/mission.md`
-- Tech Stack: `agent-os/product/tech-stack.md`
-- Development Roadmap: `agent-os/product/roadmap.md`
+- Product Mission: `docs/product/mission.md`
+- Tech Stack: `docs/product/tech-stack.md`
+- Development Roadmap: `docs/product/roadmap.md`
 
 ### Tech Stack
 - **Markup**: HTML5 (semantic)
