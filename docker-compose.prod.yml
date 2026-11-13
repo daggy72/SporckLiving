@@ -1,6 +1,8 @@
 services:
   web:
-    build: .
+    build:
+      context: .
+      pull: true  # B3345: re-pull nginx:alpine on every build (stale base = old openssl)
     ports:
       - "${PORT:-1705}:80"
     restart: unless-stopped
